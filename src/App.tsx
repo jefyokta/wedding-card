@@ -11,6 +11,7 @@ import { Greeting } from './components/greeting'
 import { Gift } from './components/gift'
 import { Toaster } from './components/ui/sonner'
 import Gallery from "@/components/gallery"
+import { Comments } from './components/comments'
 
 delete (L.Icon.Default.prototype as any)._getIconUrl
 
@@ -51,13 +52,14 @@ function App() {
   return (
     <GuestContext.Provider value={{ guest }}>
       <HoverProvider>
-        <div className='flex justify-center flex-col items-center bg-gray-200 overflow-y-scroll'>
+        <div className='flex justify-center flex-col items-center bg-gray-200 space-y-0 overflow-y-scroll'>
           <Gate />
           <Greeting />
           <Gallery />
           <Couple />
           <Location />
           <Gift />
+          <Comments />
         </div>
       </HoverProvider>
       <Toaster className='bg-white!' />

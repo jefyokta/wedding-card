@@ -14,6 +14,7 @@ import img11 from "@/assets/gallery/11.jpeg"
 import img12 from "@/assets/gallery/12.jpeg"
 
 import bg from "@/assets/flower.png"
+import { Separator } from "./ui/separator"
 
 const slides = [
   img1, img2, img3, img4, img5,
@@ -25,8 +26,11 @@ export default function Gallery() {
     <Screen className="flex flex-col   relative"
     >
       <img src={bg} alt="" className="w-full absolute bottom-0 opacity-70 " />
-      <div className="tangerine-bold text-5xl text-center text-white mt-5">
-        Our Gallery
+      <div className="flex justify-center">
+        <div className="tangerine-bold max-w-max text-5xl text-center text-white mt-5">
+          Our Gallery
+          <Separator />
+        </div>
       </div>
 
       <div className="flex-1 px-3 flex z-2 items-center justify-center">

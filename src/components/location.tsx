@@ -8,6 +8,7 @@ import te from "@/assets/te.png"
 import flower from "@/assets/flower.png"
 
 import bg from "@/assets/bg2.png"
+import { Separator } from "./ui/separator";
 
 type LatLng = {
     lat: number
@@ -15,10 +16,12 @@ type LatLng = {
 }
 
 
-const WEDDING_LOCATION: LatLng = {
+export const WEDDING_LOCATION: LatLng = {
     lat: -0.5177905833052887,
     lng: 101.52956636088031,
 }
+
+export const GmapLink = `https://www.google.com/maps/dir/?api=1&destination=${WEDDING_LOCATION.lat},${WEDDING_LOCATION.lng}`
 
 export const Location = () => {
     const [userLocation, setUserLocation] = useState<LatLng | null>(null)
@@ -59,10 +62,18 @@ export const Location = () => {
                 <div className="p-5 bg-white/2 backdrop-blur-xs pt-30 w-full h-full flex flex-col space-y-2 text-center rounded-t-full rounded-b-3xl border-b-0  border-3 border-red-100 rounded-2xl relative">
 
                     <div className="border rounded-t-full border-red-100/20  h-full right-2.5 border-r-transparent border-l-transparent top-5 w-[95%] absolute"></div>
-                    <div className="text-5xl text-center tangerine-bold text-white">Lokasi Acara</div>
+                    <div className="flex justify-center mb-2">
+                        <div className="text-5xl text-center max-w-max tangerine-bold text-white">
+                            <span>
+                                Lokasi Acara
+                            </span>
+                            <Separator />
+
+                        </div>
+                    </div>
                     <div className="text-white flex items-center-safe gap-1 text-xs justify-center"> <MapPin size={16} /> Sinambek, Taluk Kuantan</div>
-                    <div className="text-white flex items-center-safe gap-1 text-xs justify-center"><Timer size={16}/> Akad 17 Januari jam 20.00-selesai </div>
-                    <div className="text-white flex items-center-safe gap-1 text-xs justify-center mb-4"><Timer size={16}/> Resepsi 18 Januari jam 11.00-selesai </div>
+                    <div className="text-white flex items-center-safe gap-1 text-xs justify-center"><Timer size={16} /> Akad 17 Januari jam 20.00-selesai </div>
+                    <div className="text-white flex items-center-safe gap-1 text-xs justify-center mb-4"><Timer size={16} /> Resepsi 18 Januari jam 11.00-selesai </div>
                     <section className="w-full flex-1 bg-black rounded-2xl overflow-hidden text-white relative">
                         <MapContainer
                             center={WEDDING_LOCATION}
@@ -91,7 +102,7 @@ export const Location = () => {
 
                         <div className="absolute top-1 right-1 z-10 bg-black/70 backdrop-blur px-2 py-2 rounded-xl border border-white/10">
                             <a
-                                href={`https://www.google.com/maps/dir/?api=1&destination=${WEDDING_LOCATION.lat},${WEDDING_LOCATION.lng}`}
+                                href={GmapLink}
                                 target="_blank"
                                 className="inline-block  text-xs underline text-white/80 hover:text-white"
                             >
