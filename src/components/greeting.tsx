@@ -1,6 +1,6 @@
 import { useGuest } from "../hooks/use-guest"
 import { Screen } from "./screen"
-import cp from "@/assets/couple.jpg"
+import cp from "@/assets/couple.jpeg"
 
 export const Greeting = () => {
 

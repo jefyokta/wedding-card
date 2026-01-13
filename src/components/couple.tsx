@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import akmal from "@/assets/akmal.png";
+import akmal from "@/assets/akmal4.png";
 import lisa from "@/assets/lisa.png";
 import masker from "@/assets/masker.png"
 import { Screen } from "./screen";
@@ -63,7 +63,7 @@ export const Couple = () => {
                 </div>
 
 
-                <img src={akmal} alt="" className={`absolute top-0 z-2 w-80 transition-all duration-700 ease-out drop-shadow-amber-50 
+                <img src={akmal} alt="" className={`absolute bottom-0 z-2 w-80 transition-all duration-700 ease-out drop-shadow-amber-50 
                     ${hoveringElement == 'akmal' && 'drop-shadow-2xl scale-110'}  -left-10
                     ${hoveringElement == 'lisa' && ` opacity-20 `}
                     `}
