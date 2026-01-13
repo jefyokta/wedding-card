@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 
 import './App.css'
 import { Couple } from './components/couple'
@@ -9,6 +9,7 @@ import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 import { Greeting } from './components/greeting'
 import { Gift } from './components/gift'
+import { Toaster } from './components/ui/sonner'
 
 delete (L.Icon.Default.prototype as any)._getIconUrl
 
@@ -20,10 +21,30 @@ L.Icon.Default.mergeOptions({
   shadowUrl:
     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 })
+const capitalizeF = (string: string) => {
+  return string.replace(/^./g, (char) => char.toUpperCase());
+}
+
+const capitalize = (string:string) =>{
+  return string.split(' ') 
+    .map((word) => capitalizeF(word)) 
+    .join(' ');
+}
 
 export const GuestContext = createContext({ guest: "" })
 function App() {
   const [guest, setGuest] = useState("Bapak Jepi")
+
+  useEffect(() => {
+
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString);
+    const gs = urlParams.get("g")
+    if (gs) {
+      const g = gs.replaceAll("-", " ")
+      setGuest(capitalize(g))
+    }
+  }, [])
 
 
   return (
@@ -37,6 +58,7 @@ function App() {
           <Gift />
         </div>
       </HoverProvider>
+      <Toaster className='bg-white!' />
     </GuestContext.Provider>
   )
 }

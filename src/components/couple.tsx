@@ -11,6 +11,7 @@ import IA from "@/assets/te.png"
 import Ib from "@/assets/s (2).webp"
 import { Stars } from "./svg/stars";
 import s from "@/assets/s.webp"
+import flowers from "@/assets/bg3.png"
 
 const profiles = {
     lisa: {
@@ -31,7 +32,10 @@ export const Couple = () => {
 
     const { hoveringElement, setHoveringElement } = useHover()
     return (
-        <Screen id="couple" >
+        <Screen id="couple" className="relative">
+            {/* <div className={`absolute w-full h-full bg-cover opacity-20`}
+                style={{ backgroundImage: `url(${flowers})` }}
+            ></div> */} <img src={flowers} alt="" className="absolute w-full top-0 opacity-50" />
             <section className='w-full h-full relative'>
                 <div className="absolute z-1 w-full h-full">
                     <Stars disablelove={true} />
@@ -54,7 +58,7 @@ export const Couple = () => {
                 <div className={`absolute ${hoveringElement == 'akmal' ? "bottom-20" : "-bottom-20 "} -right-50 opacity-75 ease-in-out duration-1200 transition-all w-full  `}>
                     <img src={Ib} alt="" className="w-full opacity-70" />
                 </div>
-                  <div className={`absolute ${hoveringElement == 'lisa' ? "bottom-20" : "-bottom-20 "} -left-50 opacity-75 ease-in-out duration-1200 transition-all w-full  `}>
+                <div className={`absolute ${hoveringElement == 'lisa' ? "bottom-20" : "-bottom-20 "} -left-50 opacity-75 ease-in-out duration-1200 transition-all w-full  `}>
                     <img src={s} alt="" className="w-full opacity-70" />
                 </div>
 
