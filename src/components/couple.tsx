@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import akmal from "@/assets/akmal4.png";
-import lisa from "@/assets/lisa.png";
+import lisa from "@/assets/lisa2.png";
 import masker from "@/assets/masker.png"
 import { Screen } from "./screen";
 import { useHover } from "../hooks/use-hover";
@@ -16,7 +16,7 @@ import flowers from "@/assets/bg3.png"
 const profiles = {
     lisa: {
         name: "Ari NurmaLisa",
-        desc: "Putri dari Bapak dan Ibu",
+        desc: "Putri dari Bapak Mawardi dan Ibu Sumarni",
         traits: [],
         side: "left",
     },
@@ -69,7 +69,7 @@ export const Couple = () => {
                     `}
 
                 />
-                <img src={lisa} alt="" className={`absolute top-0 z-3  w-80 transition-all  duration-700 ease-out  drop-shadow-amber-50 hover:drop-shadow-2xl transit  -right-10 
+                <img src={lisa} alt="" className={`absolute bottom-25 z-1  w-90 transition-all  duration-700 ease-out  drop-shadow-amber-50 hover:drop-shadow-2xl transit  -right-30 
                     ${hoveringElement == 'lisa' && 'drop-shadow-2xl scale-[1.01]'}
                     ${hoveringElement == 'akmal' && ` opacity-20 scale-[.9]`}
 

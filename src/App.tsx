@@ -10,6 +10,7 @@ import "leaflet/dist/leaflet.css"
 import { Greeting } from './components/greeting'
 import { Gift } from './components/gift'
 import { Toaster } from './components/ui/sonner'
+import Gallery from "@/components/gallery"
 
 delete (L.Icon.Default.prototype as any)._getIconUrl
 
@@ -25,9 +26,9 @@ const capitalizeF = (string: string) => {
   return string.replace(/^./g, (char) => char.toUpperCase());
 }
 
-const capitalize = (string:string) =>{
-  return string.split(' ') 
-    .map((word) => capitalizeF(word)) 
+const capitalize = (string: string) => {
+  return string.split(' ')
+    .map((word) => capitalizeF(word))
     .join(' ');
 }
 
@@ -53,6 +54,7 @@ function App() {
         <div className='flex justify-center flex-col items-center bg-gray-200 overflow-y-scroll'>
           <Gate />
           <Greeting />
+          <Gallery />
           <Couple />
           <Location />
           <Gift />
