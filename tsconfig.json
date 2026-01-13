@@ -6,7 +6,7 @@
   ],
 "compilerOptions": {
   "paths": {
-    "@/*":["./src/*"]
+    "@/*":["src/*"]
   }
 },
     // "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "src/hypen.js"]
