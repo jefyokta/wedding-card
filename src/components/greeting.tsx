@@ -47,7 +47,7 @@ export const Greeting = () => {
                         Assalamualaikum Wr Wb
                     </p>
                     <p className="z-50">
-                        dengan ini kami mengundang {guest} untuk menghadiri acara pernikahan kami
+                        Dengan Memohon Rahmat dan Ridho Allah SWT. Izinkan kami mengundang {guest} untuk menghadiri acara pernikahan kami
                     </p>
                     {/* <div className="space-y-2 mt-2">
                         <div className="text-xl">
