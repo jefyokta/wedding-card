@@ -27,7 +27,7 @@ export const Invitation = ({ guestName = "Tamu Undangan" }) => {
             12 • 08 • 2025
           </div>
 
-          <motion.div
+          {/* <motion.div
             className="mt-10 text-white/80 text-sm leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -39,7 +39,7 @@ export const Invitation = ({ guestName = "Tamu Undangan" }) => {
             <div className="mt-1 font-medium text-base">
               {guestName}
             </div>
-          </motion.div>
+          </motion.div> */}
           <motion.button
             className="mt-12 px-8 py-3 border border-white/30 text-white text-sm tracking-widest hover:bg-white hover:text-black transition"
             whileHover={{ scale: 1.05 }}

@@ -16,7 +16,15 @@ export const Gift = () => {
     if (typeof window === "undefined") return;
 
     await navigator.clipboard.writeText(
-      "BCA 1234567890 a.n. Jefy & Pasangan"
+     `
+     AKMAL LAHIA
+Bank BRI
+066801035872507
+
+AKMAL LAHIA
+Bank Mandiri
+1090023173388
+     `
     );
 
     toast.success("Nomor rekening berhasil disalin 🤍", {

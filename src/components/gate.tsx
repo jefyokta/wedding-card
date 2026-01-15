@@ -33,6 +33,9 @@ export const Gate = () => {
                 <div className="w-full text-end leading-13">Lisa</div>
                 <div className="text-center text-sm font-sans mt-2 font-normal">{format(targetDate, "dd MMMM yyyy", { locale: id })}</div>
                 <Countdown targetDate={targetDate} />
+                <div className="w-full flex justify-center">
+                    <div className="text-sm font-sans text-center py-2 pb-1 mb-2 border-b max-w-max">Kepada : {guest}</div>
+                </div>
                 <div className=" text-white text-sm font-sans  z-2 flex justify-center font-normal">
                     <button
 
@@ -54,25 +57,6 @@ export const Gate = () => {
                     <Stars />
                 }
             </div>
-        </div>
-        <div
-            className="
-    absolute bottom-2 left-2
-    border border-white/20
-    rounded-2xl
-    px-5 py-4
-    bg-slate-900/80 backdrop-blur
-    text-white
-    max-w-xs
-  "
-        >
-            <div className="text-[10px] tracking-widest uppercase text-white/60">
-                Kepada Yth.
-            </div>
-
-            <p className="mt-1 text-sm font-medium tracking-wide">
-                {guest}
-            </p>
         </div>
 
 
