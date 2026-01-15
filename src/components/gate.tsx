@@ -40,7 +40,8 @@ export const Gate = () => {
                     <button
 
                         onClick={() => {
-                            document.getElementById("couple")?.scrollIntoView({ behavior: "smooth" })
+                            document.dispatchEvent(new Event("inv:open"))
+
                         }}
                         className="cursor-pointer text-center bg-red-100 hover:bg-red-200 text-black px-3 py-2 rounded-xl"> open invitation</button>
                 </div>

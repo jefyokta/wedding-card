@@ -12,7 +12,7 @@ export const Greeting = () => {
     const { guest } = useGuest()
     return <>
 
-        <div className="w-full max-w-106.25 relative overflow-hidden bg-[#000035] ">
+        <div className="w-full max-w-106.25 relative overflow-hidden bg-[#000035] " id="ppx">
             <img
                 src={rings}
                 alt="Rings"

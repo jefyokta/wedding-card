@@ -69,13 +69,20 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    (async()=>{
+  const [open, setOpen] = useState(false)
 
-      if (!isPlaying) {
-       await audioRef.current?.play()
-      }
-    })()
+  useEffect(() => {
+
+    const listener = async () => {
+      setOpen(true)
+      await toggleMusic()
+      setTimeout(() => {
+        document.getElementById("ppx")?.scrollIntoView({ behavior: "smooth" })
+      }, 500);
+    }
+    document.addEventListener("inv:open", listener)
+    return () => document.removeEventListener("inv:open", listener)
+
   }, [])
 
 
@@ -83,13 +90,13 @@ function App() {
     <GuestContext.Provider value={{ guest }}>
       <HoverProvider>
         <div className='flex justify-center flex-col items-center bg-gray-200 space-y-0 overflow-y-scroll relative'>
-          <div className='relative max-w-106.25'>
+          <div className={`relative max-w-106.25 ${open ? "" : "h-screen overflow-hidden"}`}>
             <div className="fixed bottom-5 z-100000000 ps-2 ">
 
-              <div className="rounded-full bg-white p-2 cursor-pointer" onClick={() => toggleMusic()}>
+              <div className="rounded-full bg-white p-2 cursor-pointer" id='bmsc' onClick={() => toggleMusic()}>
 
                 {isPlaying ? <PauseIcon /> : <MusicIcon />}
-                <audio src={ss} autoPlay ref={audioRef}></audio>
+                <audio src={ss} loop ref={audioRef}></audio>
               </div>
             </div>
             <Gate />
