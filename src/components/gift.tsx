@@ -151,9 +151,8 @@ Bank Mandiri
                     </p>
 
                     <div className="rounded-xl bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">
-                      Jl. Contoh Alamat No. 123<br />
-                      Kecamatan Contoh, Kota Contoh<br />
-                      12345
+                      Jalan Proklamasi Lk III, RT.2/RW.1, <br />Desa Sungai Jering,<br /> Kec. Kuantan Tengah, Kabupaten Kuantan Singingi, Riau
+                     
                     </div>
 
                     <p className="text-xs text-slate-500">
