@@ -72,8 +72,7 @@ export const Location = () => {
                         </div>
                     </div>
                     <div className="text-white flex items-center-safe gap-1 text-xs justify-center"> <MapPin size={16} /> Sinambek, Taluk Kuantan</div>
-                    <div className="text-white flex items-center-safe gap-1 text-xs justify-center"><Timer size={16} /> Akad 17 Januari jam 20.00-selesai </div>
-                    <div className="text-white flex items-center-safe gap-1 text-xs justify-center mb-4"><Timer size={16} /> Resepsi 18 Januari jam 11.00-selesai </div>
+           
                     <section className="w-full flex-1 bg-black rounded-2xl overflow-hidden text-white relative">
                         <MapContainer
                             center={WEDDING_LOCATION}

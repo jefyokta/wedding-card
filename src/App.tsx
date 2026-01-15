@@ -101,9 +101,9 @@ function App() {
             </div>
             <Gate />
             <Greeting />
+            <Location />
             <Gallery />
             <Couple />
-            <Location />
             <Gift />
             <Comments />
             <div className="w-full max-w-106.25 flex items-center relative overflow-hidden bg-[#000035] bg-cover origin-center min-h-screen py-4"
