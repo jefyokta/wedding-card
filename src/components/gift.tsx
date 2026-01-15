@@ -17,13 +17,9 @@ export const Gift = () => {
 
     await navigator.clipboard.writeText(
      `
-     AKMAL LAHIA
-Bank BRI
-066801035872507
-
-AKMAL LAHIA
+ARI NURMALISA
 Bank Mandiri
-1090023173388
+1080030059910
      `
     );
 

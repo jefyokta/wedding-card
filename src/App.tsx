@@ -108,7 +108,7 @@ function App() {
             <Comments />
             <div className="w-full max-w-106.25 flex items-center relative overflow-hidden bg-[#000035] bg-cover origin-center min-h-screen py-4"
 
-              style={{ backgroundImage: `url(${aa})` }}
+              style={{ backgroundImage: `url("/wedding-card/ppp.jpeg")` }}
             >
               <div className="w-full z-2">
                 <div className="w-full flex justify-center">
